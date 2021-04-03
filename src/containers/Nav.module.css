@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'UbuntuMono-Regular';
+    src: url(../material/UbuntuMono-Regular.woff2) format('woff2');
+}
+
+.nav {
+    background-color: #ffffff;
+    width: 100%;
+    box-shadow: 0 0 5px 1px rgba(68, 68, 68, 0.3);
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+.nav, .brand {
+    display: inline-flex;
+}
+
+.brand {
+    height: 45px;
+    width: max-content;
+    padding-left: 0.8em;
+}
+
+.brandName {
+    font-family: 'UbuntuMono-Regular', monospace;
+    font-size: 22pt;
+    text-align: center;
+    padding: 8px;
+}
+
+.divider {
+    width: 50px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    height: 45px;
+}
+
+.navLink {
+    margin-right: 1em;
+    line-height: 45px;
+    height: 45px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.navLink:before {
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(255, 0, 0);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.navLink:hover:before {
+    width: 100%;
+    left: 0;
+}
+
+.brandLink {
+    width: fit-content;
+}
+
+.menuBtn img {
+    height: 35px;
+    margin: 5px;
+}
+
+.menuBtn {
+    height: 45px;
+    width: 45px;
+    padding: 0;
+    /* Hide menu btn by pushing it outside by default */
+    transform: translateY(-50px);
+    transition-timing-function: ease-in;
+    transition: 0.4s;
+    right: 0;
+    position: absolute;
+    background: none;
+    color: inherit;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+@media only screen and (max-width: 720px) {
+    .nav {
+        display: grid;
+    }
+
+    .brand {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .brand img {
+        margin: auto;
+        max-height: 45px;
+    }
+
+    .navCollapsed {
+        height: 45px;
+        overflow: hidden;
+    }
+
+    .menuBtn {
+        top: initial;
+        transition-timing-function: ease-out;
+        transition: 0.4s;
+        transform: translateY(0);
+    }
+}

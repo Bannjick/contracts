@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'UbuntuMono-Regular';
-    src: url(../material/UbuntuMono-Regular.woff2) format('woff2');
+    font-family: 'Ubuntu';
+    src: url(../material/Ubuntu-Th.woff) format('woff');
 }
 
 .nav {
@@ -22,8 +22,9 @@
 }
 
 .brandName {
-    font-family: 'UbuntuMono-Regular', monospace;
-    font-size: 22pt;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 19pt;
+    font-weight: bold;
     text-align: center;
     padding: 8px;
 }
@@ -55,6 +56,7 @@ a {
     display: inline-block;
     position: relative;
     width: 100%;
+    font-weight: bold;
 }
 
 .navLink:before {
